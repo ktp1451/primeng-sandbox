@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'primeng-sandbox';
+  title!: string; /**added (!) definite assignment assertion to property**/
+
+  upper() {
+    this.title = this.title.toUpperCase();
+  }
 }
